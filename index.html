@@ -150,13 +150,18 @@
   </style>
 </head>
 <body>
-  <header>
-	<img src="logo.png" alt="ANT-ECO Logo" class="logo">
-	<button class="theme-toggle" onclick="document.body.classList.toggle('dark')">Toggle Theme</button>
-    <button class="lang-toggle" onclick="toggleLanguage()">Ukr</button>
-	<h1 data-translate="title">ANT-ECO</h1>
-	<p data-translate="subtitle">Autonomous Drone Swarms for Smart Environmental Monitoring</p>
-  </header>
+<header>
+  <div class="header-inner">
+    <img src="logo.png" alt="ANT-ECO Logo" class="logo">
+    <div class="top-controls">
+      <button class="lang-toggle" onclick="toggleLanguage()">Ukr</button>
+      <button class="theme-toggle" onclick="document.body.classList.toggle('dark')">Toggle Theme</button>
+    </div>
+    <h1 data-translate="title">ANT-ECO</h1>
+    <p data-translate="subtitle">Autonomous Drone Swarms for Smart Environmental Monitoring</p>
+  </div>
+</header>
+
 
 <section class="section">
   <h2>About the Project</h2>
