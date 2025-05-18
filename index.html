@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ANT-ECO | Autonomous Drone Swarms for Environmental Monitoring</title>
-  <meta name="description" content="ANT-ECO is a Horizon Europe research project developing AI-powered drone swarms for next-generation environmental monitoring.">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,34 +26,55 @@
       color: var(--text-color);
       transition: background 0.5s ease, color 0.5s ease;
     }
-header {
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #ffffff;
-      animation: fadeInDown 1s ease-in-out;
+    header {
+      background: var(--header-gradient);
+      color: #fff;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      gap: 1.5rem;
     }
-    header p {
-      font-size: 1.4rem;
-      color: #e0f2f1;
-      animation: fadeInUp 1.2s ease-in-out;
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      text-align: left;
     }
+
     header img.logo {
-      position: absolute;
-      top: 20px;
-      left: 400px;
-      height: 200px;
-      opacity: 0.9;
+      height: 100px;
+      opacity: 0.95;
       transition: transform 0.3s ease;
+	  margin-left: -90px;
     }
+
     header img.logo:hover {
       transform: scale(1.05);
     }
-    .theme-toggle {
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #e0f2f1;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .theme-toggle,
+    .lang-toggle {
       position: absolute;
       top: 20px;
-      right: 20px;
       background: #ffffff22;
       color: #fff;
       padding: 0.5rem 1rem;
@@ -63,37 +83,53 @@ header {
       cursor: pointer;
       font-size: 0.9rem;
     }
+
+    .theme-toggle {
+      right: 20px;
+    }
+
+    .lang-toggle {
+      right: 150px;
+    }
+
     @keyframes fadeInDown {
       0% { opacity: 0; transform: translateY(-20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+
     @keyframes fadeInUp {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+
     .section {
       padding: 4rem 2rem;
       max-width: 1100px;
       margin: auto;
       animation: fadeIn 0.8s ease-in-out;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
     .section h2 {
       font-size: 2.2rem;
       margin-bottom: 1.5rem;
       color: #0c3c52;
     }
+
     .section p {
       margin-bottom: 1rem;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
+
     .card {
       background: var(--card-bg);
       padding: 2rem;
@@ -101,10 +137,12 @@ header {
       box-shadow: 0 4px 16px rgba(0,0,0,0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
+
     .contact-btn {
       display: inline-block;
       margin-top: 2rem;
@@ -118,9 +156,11 @@ header {
       transition: background 0.3s ease;
       text-decoration: none;
     }
+
     .contact-btn:hover {
       background: #388e3c;
     }
+
     footer {
       background: #0c3c52;
       color: white;
@@ -128,36 +168,20 @@ header {
       padding: 1.5rem;
       font-size: 0.95rem;
     }
-	.lang-toggle {
-  position: absolute;
-  top: 20px;
-  right: 160px;
-  background: #ffffff22;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: 1px solid #fff;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
   </style>
 </head>
 <body>
-<header>
-  <div class="header-inner">
-    <img src="logo.png" alt="ANT-ECO Logo" class="logo">
-    <div class="top-controls">
-      <button class="lang-toggle" onclick="toggleLanguage()">Ukr</button>
-      <button class="theme-toggle" onclick="document.body.classList.toggle('dark')">Toggle Theme</button>
+  <header>
+    <button class="theme-toggle" onclick="document.body.classList.toggle('dark')">Toggle Theme</button>
+    <button class="lang-toggle" onclick="toggleLanguage()">Ukr</button>
+    <div class="header-content">
+      <img src="logo.png" alt="ANT-ECO Logo" class="logo">
+      <div>
+        <h1 data-translate="title">ANT-ECO</h1>
+        <p data-translate="subtitle">Autonomous Drone Swarms for Smart Environmental Monitoring</p>
+      </div>
     </div>
-    <h1 data-translate="title">ANT-ECO</h1>
-    <p data-translate="subtitle">Autonomous Drone Swarms for Smart Environmental Monitoring</p>
-  </div>
-</header>
-
-
-
+  </header>
 
 <section class="section">
   <h2>About the Project</h2>
