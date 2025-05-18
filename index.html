@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANT-ECO | Autonomous Drone Swarms for Environmental Monitoring</title>
+  <meta name="description" content="ANT-ECO is a Horizon Europe research project developing AI-powered drone swarms for next-generation environmental monitoring.">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-color: #f4f7f9;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --header-gradient: linear-gradient(to right, #0c3c52, #00695c);
+    }
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #e0e0e0;
+      --card-bg: #2c2c2c;
+      --header-gradient: linear-gradient(to right, #333333, #00695c);
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+    header {
+      background: var(--header-gradient);
+      color: #fff;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    header p {
+      font-size: 1.4rem;
+      color: #e0f2f1;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    header img.logo {
+      position: absolute;
+      top: 20px;
+      left: 400px;
+      height: 200px;
+      opacity: 0.9;
+      transition: transform 0.3s ease;
+    }
+    header img.logo:hover {
+      transform: scale(1.05);
+    }
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #ffffff22;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: 1px solid #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: #0c3c52;
+    }
+    .section p {
+      margin-bottom: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .contact-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+    .contact-btn:hover {
+      background: #388e3c;
+    }
+    footer {
+      background: #0c3c52;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.95rem;
+    }
+	.lang-toggle {
+  position: absolute;
+  top: 20px;
+  right: 160px;
+  background: #ffffff22;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+	<img src="logo.png" alt="ANT-ECO Logo" class="logo">
+	<button class="theme-toggle" onclick="document.body.classList.toggle('dark')">Toggle Theme</button>
+    <button class="lang-toggle" onclick="toggleLanguage()">Ukr</button>
+	<h1 data-translate="title">ANT-ECO</h1>
+	<p data-translate="subtitle">Autonomous Drone Swarms for Smart Environmental Monitoring</p>
+  </header>
+
+<section class="section">
+  <h2>About the Project</h2>
+  <p><strong>ANT-ECO</strong> is an ambitious <strong>Horizon Europe RIA project</strong> (Cluster 6: <em>"Zero Pollution"</em>) that redefines environmental monitoring using:</p>
+  <ul style="list-style: none; padding-left: 0;">
+    <li>🧠 <strong>Artificial Intelligence</strong> — detects pollution sources in real-time</li>
+    <li>🚁 <strong>Drone Swarms</strong> — inspired by nature, exploring land, water, and air</li>
+    <li>📡 <strong>High-Resolution Sensing</strong> — continuous, scalable, and precise</li>
+  </ul>
+  <p>By integrating AI with swarm robotics, ANT-ECO enables <strong>autonomous monitoring</strong> in areas too dangerous or remote for traditional methods — providing data that empowers environmental action, policy, and protection.</p>
+  <a href="mailto:andrew.kralevich@gmail.com" class="contact-btn">Contact Us</a>
+</section>
+
+<section class="section">
+  <h2>Project in Action</h2>
+  <p>See how ANT-ECO is revolutionizing environmental monitoring through intelligent drone swarms and AI-driven sensing.</p>
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); margin-top: 2rem;">
+    <iframe src="https://www.youtube.com/embed/V-3GajdtsFw" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            style="position:absolute; top:0; left:0; width:100%; height:100%;">
+    </iframe>
+  </div>
+</section>
+
+
+  <section class="section">
+    <h2>Key Features</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Swarm Intelligence</h3>
+        <p>We use Ant Colony Optimization and bio-inspired multi-agent systems for autonomous exploration of polluted areas.</p>
+      </div>
+      <div class="card">
+        <h3>Multi-Modal Sensing</h3>
+        <p>Each drone is equipped with modular sensors for gases, water quality, soil analysis, and thermal imaging.</p>
+      </div>
+      <div class="card">
+        <h3>AI-Driven Analysis</h3>
+        <p>Machine learning algorithms detect anomalies, identify pollution sources, and generate real-time environmental maps.</p>
+      </div>
+      <div class="card">
+        <h3>Open Science & FAIR</h3>
+        <p>We commit to open data, open-source tools, and citizen science workshops to ensure accessibility and impact.</p>
+      </div>
+    </div>
+  </section>
+
+<section class="section">
+  <h2>Consortium</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="icons/ukraine_flag.png" alt="Ukraine" style="width: 32px; float: right;">
+      <h3>Andrii Kralevych</h3>
+      <p>Environmental Chemistry Lead<br><small>Coordinator & WP3 Lead – Environmental Chemistry expert with experience in water toxicity and ISO 17025 laboratory methods.</small></p>
+      <img src="icons/chemistry.png" alt="Chemistry Icon" style="width: 40px; margin-top: 1rem;">
+    </div>
+    <div class="card">
+      <img src="icons/ukraine_flag.png" alt="Ukraine" style="width: 32px; float: right;">
+      <h3>Serhii Vashenko</h3>
+      <p>AI & Data Analytics<br><small>Lead WP2 – Data Scientist focused on ML for environmental monitoring and FAIR data pipeline design.</small></p>
+      <img src="icons/ai.png" alt="AI Icon" style="width: 40px; margin-top: 1rem;">
+    </div>
+    <div class="card">
+      <img src="icons/ukraine_flag.png" alt="Ukraine" style="width: 32px; float: right;">
+      <h3>Andrii Haponenko</h3>
+      <p>UAV Systems Engineer<br><small>Lead WP1 – UAV systems engineer with background in mechatronics and custom drone integration.</small></p>
+      <img src="icons/drone.png" alt="Drone Icon" style="width: 40px; margin-top: 1rem;">
+    </div>
+    <div class="card">
+      <img src="icons/poland_flag.png" alt="Poland" style="width: 32px; float: right;">
+      <h3>GreenSky Robotics</h3>
+      <p>Industry Partner<br><small>Industry Partner – Drone manufacturer providing CE-certified airframes and automated battery swap systems.</small></p>
+      <img src="icons/robotics.png" alt="Robotics Icon" style="width: 40px; margin-top: 1rem;">
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <h2>Timeline & Impact</h2>
+
+  <h3 style="margin-bottom: 1rem;">Project Timeline (36 months)</h3>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; font-size: 0.9rem;">
+      <thead>
+        <tr style="background-color: #00695c; color: white;">
+          <th style="padding: 8px; text-align: left;">Work Package</th>
+          <th>M0–M3</th>
+          <th>M4–M9</th>
+          <th>M10–M18</th>
+          <th>M19–M30</th>
+          <th>M31–M36</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 8px;">WP0 – Management</td>
+          <td>●</td><td>●</td><td>●</td><td>●</td><td>●</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px;">WP1 – UAV Platform</td>
+          <td>◐ design</td><td>● prototype</td><td>◐ validation</td><td></td><td></td>
+        </tr>
+        <tr>
+          <td style="padding: 8px;">WP2 – AI & Data</td>
+          <td></td><td>◐ algorithm dev</td><td>● MVP v1</td><td>◐ upgrades</td><td></td>
+        </tr>
+        <tr>
+          <td style="padding: 8px;">WP3 – Pilots & Impact</td>
+          <td></td><td></td><td>◐ Pilot 1</td><td>● Pilots 2-3</td><td>◐ Exploitation</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="margin-top: 2rem;">Budget Allocation</h3>
+  <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; font-size: 0.9rem;">
+      <thead>
+        <tr style="background-color: #0c3c52; color: white;">
+          <th style="padding: 8px; text-align: left;">Work Package</th>
+          <th>Purpose</th>
+          <th>Budget Share</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 8px;">WP0</td>
+          <td>Project Management & Ethics</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px;">WP1</td>
+          <td>UAV & Sensor Platform</td>
+          <td>25%</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px;">WP2</td>
+          <td>AI & Swarm Intelligence</td>
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px;">WP3</td>
+          <td>Pilot Campaigns & Impact</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px;">Contingency</td>
+          <td>Overheads & inflation buffer</td>
+          <td>15%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+  <footer>
+    &copy; 2025 ANT-ECO Project | Funded by Horizon Europe | Contact: eka24-a.kralevych@nubip.edu.ua
+  </footer>
+<script>
+  const translations = {
+    ua: {
+      "title": "ANT-ECO",
+      "subtitle": "Автономні рої дронів для інтелектуального екологічного моніторингу",
+      "about-title": "Про проєкт",
+      "about-text-1": "ANT-ECO — це амбітний проєкт Horizon Europe RIA (Кластер 6: \"Нульове забруднення\"), який переосмислює екологічний моніторинг за допомогою:",
+      "ai": "🧠 Штучний інтелект — виявляє джерела забруднення в режимі реального часу",
+      "drones": "🚁 Рої дронів — натхненні природою, досліджують сушу, воду та повітря",
+      "sensors": "📡 Високоточне зондування — безперервне, масштабоване та точне",
+      "about-text-2": "Інтегруючи ШІ з ройовою робототехнікою, ANT-ECO забезпечує автономний моніторинг у важкодоступних або небезпечних регіонах — для прийняття рішень і захисту природи.",
+      "contact": "Зв'язатися з нами",
+      "project-in-action": "Проєкт у дії",
+      "action-text": "Подивіться, як ANT-ECO революціонізує екологічний моніторинг за допомогою інтелектуальних роїв дронів і систем ШІ.",
+      "features": "Ключові особливості",
+      "f1": "Ройовий інтелект",
+      "f1d": "Ми використовуємо алгоритм мурашиної оптимізації та біо-натхненні мультиагентні системи для дослідження забруднених територій.",
+      "f2": "Мультимодальне зондування",
+      "f2d": "Кожен дрон оснащено модулями для аналізу газів, якості води, ґрунту та теплового зображення.",
+      "f3": "Аналіз на основі ШІ",
+      "f3d": "Алгоритми машинного навчання виявляють аномалії, джерела забруднення та створюють карти в реальному часі.",
+      "f4": "Відкрита наука та FAIR",
+      "f4d": "Ми дотримуємось принципів відкритих даних і залучаємо громадськість через наукові воркшопи.",
+      "consortium": "Консорціум",
+      "timeline": "Хронологія та вплив",
+    },
+    en: {
+      "title": "ANT-ECO",
+      "subtitle": "Autonomous Drone Swarms for Smart Environmental Monitoring",
+      "about-title": "About the Project",
+      "about-text-1": "ANT-ECO is an ambitious Horizon Europe RIA project (Cluster 6: \"Zero Pollution\") that redefines environmental monitoring using:",
+      "ai": "🧠 Artificial Intelligence — detects pollution sources in real-time",
+      "drones": "🚁 Drone Swarms — inspired by nature, exploring land, water, and air",
+      "sensors": "📡 High-Resolution Sensing — continuous, scalable, and precise",
+      "about-text-2": "By integrating AI with swarm robotics, ANT-ECO enables autonomous monitoring in areas too dangerous or remote — providing data for policy and protection.",
+      "contact": "Contact Us",
+      "project-in-action": "Project in Action",
+      "action-text": "See how ANT-ECO is revolutionizing environmental monitoring through intelligent drone swarms and AI-driven sensing.",
+      "features": "Key Features",
+      "f1": "Swarm Intelligence",
+      "f1d": "We use Ant Colony Optimization and bio-inspired multi-agent systems for autonomous exploration of polluted areas.",
+      "f2": "Multi-Modal Sensing",
+      "f2d": "Each drone is equipped with modular sensors for gases, water quality, soil analysis, and thermal imaging.",
+      "f3": "AI-Driven Analysis",
+      "f3d": "Machine learning algorithms detect anomalies, identify pollution sources, and generate real-time environmental maps.",
+      "f4": "Open Science & FAIR",
+      "f4d": "We commit to open data, open-source tools, and citizen science workshops to ensure accessibility and impact.",
+      "consortium": "Consortium",
+      "timeline": "Timeline & Impact",
+    }
+  };
+
+  let currentLang = 'en';
+
+  function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'ua' : 'en';
+    document.querySelector('.lang-toggle').innerText = currentLang === 'en' ? 'Ukr' : 'Eng';
+
+    const t = translations[currentLang];
+    document.querySelector('[data-translate="title"]').textContent = t["title"];
+    document.querySelector('[data-translate="subtitle"]').textContent = t["subtitle"];
+    document.querySelector('h2').textContent = t["about-title"];
+    document.querySelector('section p').textContent = t["about-text-1"];
+    const ulItems = document.querySelectorAll("section ul li");
+    ulItems[0].textContent = t["ai"];
+    ulItems[1].textContent = t["drones"];
+    ulItems[2].textContent = t["sensors"];
+    document.querySelectorAll('section p')[1].textContent = t["about-text-2"];
+    document.querySelector('.contact-btn').textContent = t["contact"];
+    document.querySelectorAll('.section h2')[1].textContent = t["project-in-action"];
+    document.querySelectorAll('.section p')[2].textContent = t["action-text"];
+    document.querySelectorAll('.section h2')[2].textContent = t["features"];
+    const cards = document.querySelectorAll('.card');
+    cards[0].querySelector('h3').textContent = t["f1"];
+    cards[0].querySelector('p').textContent = t["f1d"];
+    cards[1].querySelector('h3').textContent = t["f2"];
+    cards[1].querySelector('p').textContent = t["f2d"];
+    cards[2].querySelector('h3').textContent = t["f3"];
+    cards[2].querySelector('p').textContent = t["f3d"];
+    cards[3].querySelector('h3').textContent = t["f4"];
+    cards[3].querySelector('p').textContent = t["f4d"];
+    document.querySelectorAll('.section h2')[3].textContent = t["consortium"];
+    document.querySelectorAll('.section h2')[4].textContent = t["timeline"];
+  }
+</script>
+
+</body>
+</html>
